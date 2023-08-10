@@ -14,6 +14,7 @@ import CircleRating from "../circleRating/CircleRating";
 
 
 import "./style.scss";
+import Genres from "../genres/Genres";
 
 const Carousel = ({ data, loading, endpoint, title }) => {
     const carouselContainer = useRef();
@@ -81,6 +82,10 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                             rating={item.vote_average.toFixed(
                                                 1
                                             )}
+                                        />
+
+                                        <Genres
+                                            data={item.genre_ids.slice(0, 2)}
                                         />
 
                                     </div>
